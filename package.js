@@ -2,7 +2,7 @@ Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-layout',
   summary: 'Fork of iron:layout for Firestorm',
   version: '1.0.0',
-  git: 'https://github.com/meteorhubdotnet/iron-layout'
+  git: 'https://github.com/meteorhubdotnet/firestorm-iron-layout'
 });
 
 Package.on_use(function (api) {
