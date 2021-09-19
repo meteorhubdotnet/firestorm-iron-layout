@@ -1,12 +1,12 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-layout',
   summary: 'Fork of iron:layout for Firestorm',
-  version: '1.0.4',
+  version: '1.0.5',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-layout'
 });
 
-Package.on_use(function (api) {
-  api.versionsFrom('METEOR@2.2');
+Package.onUse(function (api) {
+  api.versionsFrom('METEOR@2.3.6');
 
   // so our default_layout gets compiled
   api.use('templating@1.4.0');
@@ -16,33 +16,33 @@ Package.on_use(function (api) {
   api.use('underscore');
   api.use('tracker'); // for Deps
 
-  api.use('meteorhubdotnet:firestorm-iron-core@1.0.4');
-  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.4');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.5');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.5');
 
   // dynamic templates
-  api.use('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.4');
+  api.use('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.5');
 
   // if you use iron-layout you should get iron-dynamic-template for free!
-  api.imply('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.4');
+  api.imply('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.5');
 
   // error messages to remove old packages
   // api.use('cmather:blaze-layout@0.2.5', {weak: true});
   // api.use('cmather:iron-layout@0.2.0', {weak: true});
 
-  // api.add_files('version_conflict_errors.js');
-  api.add_files('default_layout.html');
-  api.add_files('layout.js');
+  // api.addFiles('version_conflict_errors.js');
+  api.addFiles('default_layout.html');
+  api.addFiles('layout.js');
 });
 
-Package.on_test(function (api) {
-  api.versionsFrom('METEOR@2.2');
+Package.onTest(function (api) {
+  api.versionsFrom('METEOR@2.3.6');
 
-  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.4');
+  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.5');
   api.use('tinytest');
   api.use('test-helpers');
   api.use('templating');
   api.use('deps');
 
-  api.add_files('layout_test.html', 'client');
-  api.add_files('layout_test.js', 'client');
+  api.addFiles('layout_test.html', 'client');
+  api.addFiles('layout_test.js', 'client');
 });
