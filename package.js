@@ -1,7 +1,7 @@
 Package.describe({
   name: 'meteorhubdotnet:firestorm-iron-layout',
   summary: 'Fork of iron:layout for Firestorm',
-  version: '1.0.7',
+  version: '1.0.10',
   git: 'https://github.com/meteorhubdotnet/firestorm-iron-layout'
 });
 
@@ -9,21 +9,21 @@ Package.onUse(function (api) {
   api.versionsFrom('METEOR@2.7.3');
 
   // so our default_layout gets compiled
-  api.use('templating');
+  api.use('templating@1.4.2');
   api.use('blaze@2.6.1');
 
   // some utils
   api.use('underscore');
   api.use('tracker'); // for Deps
 
-  api.use('meteorhubdotnet:firestorm-iron-core@1.0.7');
-  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.7');
+  api.use('meteorhubdotnet:firestorm-iron-core@1.0.10');
+  api.imply('meteorhubdotnet:firestorm-iron-core@1.0.10');
 
   // dynamic templates
-  api.use('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.7');
+  api.use('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.10');
 
   // if you use iron-layout you should get iron-dynamic-template for free!
-  api.imply('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.7');
+  api.imply('meteorhubdotnet:firestorm-iron-dynamic-template@1.0.10');
 
   // error messages to remove old packages
   // api.use('cmather:blaze-layout@0.2.5', {weak: true});
@@ -37,10 +37,10 @@ Package.onUse(function (api) {
 Package.onTest(function (api) {
   api.versionsFrom('METEOR@2.7.3');
 
-  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.7');
+  api.use('meteorhubdotnet:firestorm-iron-layout@1.0.10');
   api.use('tinytest');
   api.use('test-helpers');
-  api.use('templating');
+  api.use('templating@1.4.2');
   api.use('deps');
 
   api.addFiles('layout_test.html', 'client');
